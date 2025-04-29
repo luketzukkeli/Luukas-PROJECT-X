@@ -1,4 +1,12 @@
 
+.main-section {
+  display:flex;
+  flex-direction: column;
+}
+
+.main {
+  margin-left: 200px;
+}
 
 .thumbnail {
   width: 100%;
@@ -22,12 +30,25 @@ display: grid;
 grid-template-columns: 50px 1fr
 }
 
+.channel-picture {
+display: inline-block;
+width: 50px;
+vertical-align: top;
+background-color: gray;
+}
+
+.video-info {
+  display: inline-block;
+width: 245px;
+background-color: gray;
+}
+
 .profile-picture {
-width: 40px;
+width: 36px;
 border-radius:50px;
 }
 .thumbnail-row {
-margin-bottom: 4px;
+margin-bottom: 8px;
 position: relative;
 }
 

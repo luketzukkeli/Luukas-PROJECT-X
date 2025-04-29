@@ -9,6 +9,7 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
+z-index: 100;
 
 background-color: white;
 border-bottom-width: 1px;
@@ -20,7 +21,7 @@ border-bottom-color: rgb(228, 228, 228);
 display: flex;
 align-items: center;
 }
-
+ 
 .hamburger-menu {
 height: 24px;
 margin-left: 24px;
@@ -29,8 +30,9 @@ margin-right: 24px;
 
 .youtube.logo {
 height: 20px;
-
 }
+
+
 .middle-section  {
 flex: 1;
 margin-left: 70px; 
@@ -41,6 +43,7 @@ align-items: center;
 }
 
 .search-bar {
+
 flex: 1;
 height: 36px;
 padding-left: 10px;
@@ -49,10 +52,9 @@ border-width: 1px;
 border-style: solid;
 border-color: rgb(192, 192, 192);
 border-radius: 2px;
-box-shadow: inset 1px 2px 3px 
-rgba(0, 0, 0, 0.05);
-width: 0;
-}
+box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+width: 0
+;}
 
 .search-bar::placeholder {
   font-family: Roboto, Arial;
@@ -62,27 +64,52 @@ width: 0;
 .search-button {
 height: 40px;
 width: 60px;
-background-color: rgb(240, 240, 240);
+background-color: rgb(240, 240,240);
 border-width: 1px;
 border-style: solid;
-border-color: rgb(192, 192, 192)
-;
+border-color: rgb(192, 192, 192);
 margin-left: -1px;
+margin-right: 8px;
+
+position: relative;
+}
+
+.search-button img {
+  max-width: 22px;
+}
+
+.search-button .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.search-button:hover .tooltip {
+  opacity: 1;
 }
 
 .search-icon {
 height: 25px;
 margin-top: 4px;
-
 }
 
 .voice-search-button {
 height: 40px;
-width: 200px;
+width: 40px;
 border-radius: 20px;
 border: none;
-background-color: rgb(248, 248,
-248);
+background-color: rgb(248, 248,248);
 }
 
 .voice-search-icon {
@@ -104,11 +131,29 @@ height: 24px;
 }
 
 .youtube-apps-icon {
-height: 24px;
-}
+height: 24px;}
 
 .notifications-icon {
 height: 24px;
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+top: -2px;
+right: -5px;
+background-color: red (200, 0, 0,);
+color: white;
+font-family: Roboto, Arial;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+border-radius: 10px;
 }
 
 .current-user-picture {
